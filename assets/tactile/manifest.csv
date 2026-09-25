@@ -1,0 +1,12 @@
+1,Xynova,Place_Can_Platform.mp4,"Pick up the yellow can with your right hand and place it upright on the white platform.","ME-Dex","ME-Dex rollout",1
+2,Xynova,Place_Tissues_Box.mp4,"Pick up the tissues on the table with your right hand and place it into the brown cardboard box on the right.","ME-Dex","ME-Dex rollout",2
+3,Xynova,Stack_Can.mp4,"Pick up the yellow can on the right with your right hand and stack it upright on top of the other can.","ME-Dex","ME-Dex rollout",3
+4,SO101,upright_medicine_bottle.mp4, "Turn the plastic medicine bottle upright.", "ME-Dex","ME-Dex rollout",1
+5,SO101,relocate_power_plug.mp4, "Move the power plug from one socket to another.", "ME-Dex","ME-Dex rollout",2
+6,SO101,upright_medicine_bottle.mp4, "Turn the plastic medicine bottle upright.", "ME-Dex","ME-Dex rollout",3
+7,dexjoco,microwave.mp4, "Open the microwave door, place the food inside the microwave, close the door, and press the start button.", "ME-Dex","ME-Dex rollout",1
+8,dexjoco,hanoi.mp4, "Execute the final two moves of the three-level Tower of Hanoi: move the medium disk from the middle peg to the right peg with the right hand, then move the small disk from the left peg to the right peg with the left hand.", "ME-Dex","ME-Dex rollout",2
+9,dexjoco,assembly.mp4, "Grasp the tray with the left hand and the peg with the right hand, then insert the peg into the hole.", "ME-Dex","ME-Dex rollout",3
+10,robotwin,pick_dual_bottles.mp4, "Use one arm to grab the bottle with red screw cap, the other for the green bottle.", "ME-Dex","ME-Dex rollout",1
+11,robotwin,place_bread_skillet.mp4, "Take the round braided loaf and put it in the pan-shaped skillet with hole in handle.", "ME-Dex","ME-Dex rollout",2
+12,robotwin,place_bread_basket.mp4, "Use the right arm to pick up the oval bread, then place it in the breadbasket with smooth bottom grid sides.", "ME-Dex","ME-Dex rollout",3

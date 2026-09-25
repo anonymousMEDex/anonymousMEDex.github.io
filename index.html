@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ME-Dex 1.0: Unifying heterogeneous tactile sensing into world action modeling." />
+  <title>ME-Dex 1.0 | Project Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#top">ME-Dex</a>
+      <div class="nav-links">
+        <a href="#contributions">Method</a>
+        <a href="#results">Results</a>
+        <a href="#rollouts">Rollouts</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <p class="eyebrow">World Action Tactile Modeling</p>
+      <h1>ME-Dex 1.0</h1>
+      <p class="title"><span>Unifying Heterogeneous Tactile Sensing</span><span>into World Action Modeling</span></p>
+      <p class="lede">A unified model for predicting future visual states, tactile states, and robot actions across grippers and dexterous hands.</p>
+      <figure class="hero-figure">
+        <div class="media-label">Video overview</div>
+        <video class="hero-video" controls playsinline preload="metadata" aria-label="ME-Dex project video">
+          <source src="assets/project_media.mp4" type="video/mp4" />
+          Your browser does not support the project video.
+        </video>
+        <div class="video-tools">
+          <label for="playback-rate">Playback speed</label>
+          <select id="playback-rate" aria-label="Playback speed">
+            <option value="0.5">0.5×</option>
+            <option value="0.75">0.75×</option>
+            <option value="1" selected>1×</option>
+            <option value="1.25">1.25×</option>
+            <option value="1.5">1.5×</option>
+            <option value="2">2×</option>
+          </select>
+        </div>
+      </figure>
+      <div class="hero-results" id="results" role="region" aria-label="Benchmark success rates">
+        <p class="eyebrow">State-of-the-Art Performance</p>
+        <div class="stat-grid">
+          <div class="stat"><strong>80.4%</strong><span>RoboTwin<br />Clean → Clean/Random average</span></div>
+          <div class="stat"><strong>65.3%</strong><span>DexJoCo<br />11-task average</span></div>
+          <div class="stat"><strong>70.0%</strong><span>ManiFeel<br />4 insertion tasks average</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container abstract-section" id="abstract">
+      <div class="abstract-label">
+        <p class="eyebrow">Abstract</p>
+      </div>
+      <p class="abstract-text">World Action Models predict future visual states to inform robot action generation. Tactile sensing directly captures contact states and force changes during physical interaction. Existing methods often treat tactile sensing as a conditioning input for action generation, thereby modeling only the current contact state. Instead, tactile signals should be modeled alongside video as future observations of the evolving world state. We present <strong class="abstract-highlight">ME-Dex 1.0 (ME-Dex)</strong>, a unified World Action Tactile Model for joint modeling of visual states, tactile states, and robot actions. ME-Dex adopts a Mixture-of-Transformers comprising a Video Expert, a Tactile Expert, and an Action Expert, all trained with flow matching. Multi-modal joint attention connects the three experts at intermediate layers, allowing action generation to exploit learned visual and tactile dynamics during joint generation. To support heterogeneous tactile inputs across embodiments, ME-Dex maps sensor surfaces to a Canonical Hand Model and encodes the aligned observations into a unified latent space with a <strong class="abstract-highlight">Unified Tactile Autoencoder</strong>. We augment tactile-free simulation trajectories with synchronized tactile observations for joint visual, tactile, and action learning. On RoboTwin, DexJoCo, and ManiFeel, ME-Dex improves average manipulation success over the strongest baselines by <strong class="abstract-highlight">9.1, 8.9, and 15.0 percentage points</strong>, respectively. Qualitative rollouts on physical robots further demonstrate the use of visual and tactile observations across grippers and dexterous hands.</p>
+    </section>
+
+    <section class="section section-muted" id="contributions">
+      <div class="container">
+        <div class="contrib-intro">
+          <div class="section-heading">
+            <p class="eyebrow">What ME-Dex contributes</p>
+            <h2>Three pieces bring tactile sensing into world action modeling.</h2>
+          </div>
+          <figure class="contrib-pipeline">
+            <img src="assets/mainpipeline.png" alt="ME-Dex main pipeline" />
+            <figcaption>Joint visual, tactile, and action modeling.</figcaption>
+          </figure>
+        </div>
+        <div class="contrib-grid">
+          <article class="contrib-card">
+            <div class="contrib-title"><span>01</span><h3>Joint future-state modeling</h3></div>
+            <p>A three-expert Mixture-of-Transformers predicts future video, tactile latents, and action chunks together.</p>
+          </article>
+          <article class="contrib-card">
+            <div class="contrib-title"><span>02</span><h3>Unified tactile representation</h3></div>
+            <p>A Canonical Hand Model and Unified Tactile Autoencoder align tactile observations across grippers and dexterous hands.</p>
+          </article>
+          <article class="contrib-card">
+            <div class="contrib-title"><span>03</span><h3>Synchronized tactile data</h3></div>
+            <p>Tactile-free simulation trajectories are augmented with synchronized tactile observations for joint learning.</p>
+          </article>
+        </div>
+        <figure class="platform-strip">
+          <img src="assets/platforms.png" alt="Simulation benchmarks and physical robot platforms used by ME-Dex" />
+          <figcaption>Simulation benchmarks and physical platforms covered by ME-Dex.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="rollouts">
+      <div class="container">
+        <div class="rollout-group">
+          <p class="eyebrow">Simulation</p>
+          <div class="simulation-source-headings">
+            <div class="source-heading"><h3>RoboTwin</h3><span>Gripper manipulation</span></div>
+            <div class="source-heading"><h3>DexJoCo</h3><span>Dexterous manipulation</span></div>
+          </div>
+          <div class="simulation-video-stack">
+            <div class="simulation-video-row">
+              <figure class="rollout-video-card simulation-robotwin-video">
+                <video controls playsinline preload="auto" aria-label="RoboTwin: pick dual bottles">
+                  <source src="assets/tactile/robotwin/pick_dual_bottles.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Pick Dual Bottles.</strong> Use one arm to grab the bottle with the red screw cap and the other arm to grab the green bottle.</figcaption>
+              </figure>
+              <figure class="rollout-video-card simulation-dexjoco-video dexjoco-microwave">
+                <video controls playsinline preload="auto" aria-label="DexJoCo: microwave">
+                  <source src="assets/tactile/dexjoco/microwave.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Microwave.</strong> Open the microwave, place the food inside, close the door, and press the start button.</figcaption>
+              </figure>
+            </div>
+            <div class="simulation-video-row">
+              <figure class="rollout-video-card simulation-robotwin-video">
+                <video controls playsinline preload="auto" aria-label="RoboTwin: place bread in skillet">
+                  <source src="assets/tactile/robotwin/place_bread_skillet.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Place Bread in Skillet.</strong> Take the round braided loaf and put it in the pan-shaped skillet with a hole in the handle.</figcaption>
+              </figure>
+              <figure class="rollout-video-card simulation-dexjoco-video dexjoco-hanoi">
+                <video controls playsinline preload="auto" aria-label="DexJoCo: Tower of Hanoi">
+                  <source src="assets/tactile/dexjoco/hanoi.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Tower of Hanoi.</strong> Move the medium disk to the right peg, then move the small disk to the right peg with the other hand.</figcaption>
+              </figure>
+            </div>
+            <div class="simulation-video-row">
+              <figure class="rollout-video-card simulation-robotwin-video">
+                <video controls playsinline preload="auto" aria-label="RoboTwin: place bread in basket">
+                  <source src="assets/tactile/robotwin/place_bread_basket.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Place Bread in Basket.</strong> Use the right arm to pick up the oval bread and place it in the breadbasket.</figcaption>
+              </figure>
+              <figure class="rollout-video-card simulation-dexjoco-video dexjoco-assembly">
+                <video controls playsinline preload="auto" aria-label="DexJoCo: assembly">
+                  <source src="assets/tactile/dexjoco/assembly.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Assembly.</strong> Grasp the tray with the left hand and the peg with the right hand, then insert the peg into the hole.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="rollout-group">
+          <p class="eyebrow">Physical robots</p>
+          <div class="paired-source-headings">
+            <div class="source-heading"><h3>LeRobot SO-101 PX</h3><span>Gripper manipulation</span></div>
+            <div class="source-heading"><h3>Xynova Flex2</h3><span>Dexterous manipulation</span></div>
+          </div>
+          <div class="paired-video-stack">
+            <div class="paired-video-row">
+              <figure class="rollout-video-card so101-video">
+                <video controls playsinline preload="auto" aria-label="LeRobot SO-101: upright medicine bottle">
+                  <source src="assets/tactile/SO101/upright_medicine_bottle.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Upright Medicine Bottle.</strong> Turn the plastic medicine bottle upright.</figcaption>
+              </figure>
+              <figure class="rollout-video-card xynova-video">
+                <video controls playsinline preload="auto" aria-label="Xynova Flex2: place can on platform">
+                  <source src="assets/tactile/Xynova/Place_Can_Platform.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Place Can on Platform.</strong> Pick up the yellow can and place it upright on the white platform.</figcaption>
+              </figure>
+            </div>
+            <div class="paired-video-row">
+              <figure class="rollout-video-card so101-video">
+                <video controls playsinline preload="auto" aria-label="LeRobot SO-101: relocate power plug">
+                  <source src="assets/tactile/SO101/relocate_power_plug.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Relocate Power Plug.</strong> Move the power plug from one socket to another.</figcaption>
+              </figure>
+              <figure class="rollout-video-card xynova-video">
+                <video controls playsinline preload="auto" aria-label="Xynova Flex2: place tissues box">
+                  <source src="assets/tactile/Xynova/Place_Tissues_Box.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Place Tissues in Box.</strong> Pick up the tissues and place them into the brown cardboard box.</figcaption>
+              </figure>
+            </div>
+            <div class="paired-video-row">
+              <figure class="rollout-video-card so101-video">
+                <video controls playsinline preload="auto" aria-label="LeRobot SO-101: upright medicine bottle placeholder">
+                  <source src="assets/tactile/SO101/upright_medicine_bottle.mp4?slot=3" type="video/mp4" />
+                </video>
+                <figcaption><strong>Upright Medicine Bottle.</strong> Temporary duplicate slot for the pending third clip.</figcaption>
+              </figure>
+              <figure class="rollout-video-card xynova-video">
+                <video controls playsinline preload="auto" aria-label="Xynova Flex2: stack cans">
+                  <source src="assets/tactile/Xynova/Stack_Can.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Stack Can.</strong> Pick up the yellow can and stack it upright on the other can.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const video = document.querySelector('.hero-video');
+    const rate = document.querySelector('#playback-rate');
+    rate.addEventListener('change', () => { video.playbackRate = Number(rate.value); });
+  </script>
+
+  <footer class="footer container">
+    <span>ME-Dex 1.0</span>
+    <span>Anonymous project page · ICLR 2027</span>
+  </footer>
+</body>
+</html>
