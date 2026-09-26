@@ -25,13 +25,6 @@ h1 { margin: 0; font-size: clamp(4rem, 11vw, 8.2rem); line-height: 1.02; letter-
 .title span { display: block; }
 .lede { max-width: 650px; margin: 0 auto; color: var(--muted); font-size: 1.08rem; }
 
-.resource-links { display: flex; justify-content: center; margin: 1.8rem auto 2.7rem; }
-.resource-link { display: grid; grid-template-columns: auto 1fr auto; align-items: center; column-gap: .8rem; width: min(100%, 620px); padding: 1rem 1.2rem; border: 1px solid var(--line); border-radius: 16px; color: var(--ink); background: linear-gradient(120deg, #f1f8f5, #fff); box-shadow: 0 12px 28px rgba(18,50,50,.06); transition: transform .2s, border-color .2s, box-shadow .2s; text-align: left; }
-.resource-link:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 16px 32px rgba(21,122,114,.12); }
-.resource-link-label { color: var(--accent); font-size: .68rem; font-weight: 800; letter-spacing: .14em; }
-.resource-link-title { font-size: 1.05rem; font-weight: 760; line-height: 1.15; }
-.resource-link-copy { grid-column: 2 / 3; color: var(--muted); font-size: .82rem; line-height: 1.35; }
-.resource-link-arrow { color: var(--accent); font-size: 1.35rem; font-weight: 650; }
 .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; margin: 2rem 0 3.2rem; }
 .button { padding: .64rem 1.05rem; border: 1px solid var(--line); border-radius: 999px; background: white; font-weight: 650; font-size: .9rem; transition: transform .2s, box-shadow .2s, border-color .2s; }
 .button:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 8px 24px rgba(21,122,114,.12); }
