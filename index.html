@@ -15,6 +15,7 @@
         <a href="#contributions">Method</a>
         <a href="#results">Results</a>
         <a href="#rollouts">Rollouts</a>
+        <a href="https://github.com/anonymousMEDex/ME-Dex-1.0-anonymous-code" target="_blank" rel="noreferrer">Code</a>
       </div>
     </nav>
   </header>
@@ -25,6 +26,14 @@
       <h1>ME-Dex 1.0</h1>
       <p class="title"><span>Unifying Heterogeneous Tactile Sensing</span><span>into World Action Modeling</span></p>
       <p class="lede">A unified model for predicting future visual states, tactile states, and robot actions across grippers and dexterous hands.</p>
+      <div class="resource-links" aria-label="Project resources">
+        <a class="resource-link" href="https://github.com/anonymousMEDex/ME-Dex-1.0-anonymous-code" target="_blank" rel="noreferrer">
+          <span class="resource-link-label">CODE RELEASE</span>
+          <span class="resource-link-title">Implementation</span>
+          <span class="resource-link-copy">Inference runtime and training components</span>
+          <span class="resource-link-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
       <figure class="hero-figure">
         <div class="media-label">Video overview</div>
         <video class="hero-video" controls playsinline preload="metadata" aria-label="ME-Dex project video">
@@ -46,7 +55,7 @@
       <div class="hero-results" id="results" role="region" aria-label="Benchmark success rates">
         <p class="eyebrow">State-of-the-Art Performance</p>
         <div class="stat-grid">
-          <div class="stat"><strong>80.4%</strong><span>RoboTwin<br />Clean → Clean/Random average</span></div>
+          <div class="stat"><strong>82.5%</strong><span>RoboTwin<br />Clean → Clean/Random average</span></div>
           <div class="stat"><strong>65.3%</strong><span>DexJoCo<br />11-task average</span></div>
           <div class="stat"><strong>70.0%</strong><span>ManiFeel<br />4 insertion tasks average</span></div>
         </div>
@@ -57,7 +66,7 @@
       <div class="abstract-label">
         <p class="eyebrow">Abstract</p>
       </div>
-      <p class="abstract-text">World Action Models predict future visual states to inform robot action generation. Tactile sensing directly captures contact states and force changes during physical interaction. Existing methods often treat tactile sensing as a conditioning input for action generation, thereby modeling only the current contact state. Instead, tactile signals should be modeled alongside video as future observations of the evolving world state. We present <strong class="abstract-highlight">ME-Dex 1.0 (ME-Dex)</strong>, a unified World Action Tactile Model for joint modeling of visual states, tactile states, and robot actions. ME-Dex adopts a Mixture-of-Transformers comprising a Video Expert, a Tactile Expert, and an Action Expert, all trained with flow matching. Multi-modal joint attention connects the three experts at intermediate layers, allowing action generation to exploit learned visual and tactile dynamics during joint generation. To support heterogeneous tactile inputs across embodiments, ME-Dex maps sensor surfaces to a Canonical Hand Model and encodes the aligned observations into a unified latent space with a <strong class="abstract-highlight">Unified Tactile Autoencoder</strong>. We augment tactile-free simulation trajectories with synchronized tactile observations for joint visual, tactile, and action learning. On RoboTwin, DexJoCo, and ManiFeel, ME-Dex improves average manipulation success over the strongest baselines by <strong class="abstract-highlight">9.1, 8.9, and 15.0 percentage points</strong>, respectively. Qualitative rollouts on physical robots further demonstrate the use of visual and tactile observations across grippers and dexterous hands.</p>
+      <p class="abstract-text">World Action Models predict future visual states to inform robot action generation. Tactile sensing directly captures contact states and force changes during physical interaction. Existing methods often treat tactile sensing as a conditioning input for action generation, thereby modeling only the current contact state. Instead, tactile signals should be modeled alongside video as future observations of the evolving world state. We present <strong class="abstract-highlight">ME-Dex 1.0 (ME-Dex)</strong>, a unified World Action Tactile Model for joint modeling of visual states, tactile states, and robot actions. ME-Dex adopts a Mixture-of-Transformers comprising a Video Expert, a Tactile Expert, and an Action Expert, all trained with flow matching. Multi-modal joint attention connects the three experts at intermediate layers, allowing action generation to exploit learned visual and tactile dynamics during joint generation. To support heterogeneous tactile inputs across embodiments, ME-Dex maps sensor surfaces to a Canonical Hand Model and encodes the aligned observations into a unified latent space with a <strong class="abstract-highlight">Unified Tactile Autoencoder</strong>. We augment tactile-free simulation trajectories with synchronized tactile observations for joint visual, tactile, and action learning. On RoboTwin, DexJoCo, and ManiFeel, ME-Dex improves average manipulation success over the strongest baselines by <strong class="abstract-highlight">11.2, 8.9, and 15.0 percentage points</strong>, respectively. Qualitative rollouts on physical robots further demonstrate the use of visual and tactile observations across grippers and dexterous hands.</p>
     </section>
 
     <section class="section section-muted" id="contributions">
