@@ -3,7 +3,7 @@
 3,Xynova,Stack_Can.mp4,"Pick up the yellow can on the right with your right hand and stack it upright on top of the other can.","ME-Dex","ME-Dex rollout",3
 4,SO101,upright_medicine_bottle.mp4, "Turn the plastic medicine bottle upright.", "ME-Dex","ME-Dex rollout",1
 5,SO101,relocate_power_plug.mp4, "Move the power plug from one socket to another.", "ME-Dex","ME-Dex rollout",2
-6,SO101,upright_medicine_bottle.mp4, "Turn the plastic medicine bottle upright.", "ME-Dex","ME-Dex rollout",3
+6,SO101,object_transfer_box.mp4, "Move the tabletop objects into the box from left to right, one at a time.", "ME-Dex","ME-Dex rollout",3
 7,dexjoco,microwave.mp4, "Open the microwave door, place the food inside the microwave, close the door, and press the start button.", "ME-Dex","ME-Dex rollout",1
 8,dexjoco,hanoi.mp4, "Execute the final two moves of the three-level Tower of Hanoi: move the medium disk from the middle peg to the right peg with the right hand, then move the small disk from the left peg to the right peg with the left hand.", "ME-Dex","ME-Dex rollout",2
 9,dexjoco,assembly.mp4, "Grasp the tray with the left hand and the peg with the right hand, then insert the peg into the hole.", "ME-Dex","ME-Dex rollout",3
