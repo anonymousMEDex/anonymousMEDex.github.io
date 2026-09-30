@@ -148,6 +148,9 @@ h2 { margin: 0; font-family: "Helvetica Neue", Arial, sans-serif; font-size: cla
 .comparison-instruction strong { color: var(--accent-dark); }
 .comparison-method-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; }
 .comparison-method { min-width: 0; padding: .65rem; border: 1px solid var(--line); border-radius: 14px; background: #f8fbfa; }
+.comparison-method.is-ours { border-color: rgba(0,140,120,.45); background: linear-gradient(135deg, #f0fbf7 0%, #e2f5ee 100%); box-shadow: 0 8px 22px rgba(0,140,120,.08); }
+.comparison-method.is-ours .comparison-method-head h3 { color: var(--accent-dark); }
+.comparison-method.is-ours .comparison-result.success { border-color: rgba(0,140,120,.38); color: var(--accent-dark); background: rgba(0,140,120,.13); }
 .comparison-method-grid.dexjoco { grid-template-columns: 1fr; gap: .65rem; }
 .comparison-method-grid.dexjoco .comparison-method { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 1rem; align-items: start; }
 .comparison-method-grid.dexjoco .comparison-method-head { flex-direction: column; align-items: flex-start; justify-content: flex-start; margin: .1rem 0 0; gap: .5rem; }
